@@ -1,0 +1,27 @@
+classDiagram
+    class Main {
+        +main(args: String[]) void
+    }
+    class ShoppingCart {
+        -items: List<Product>
+        +addProduct(product: Product) void
+        +getItems() List<Product>
+        +getTotalPrice() double
+    }
+    class Product {
+        -name: String
+        -category: String
+        -price: double
+        -quantity: int
+        +Product(name: String, category: String, price: double, quantity: int)
+        +getName() String
+        +setName(name: String) void
+        +getCategory() String
+        +setCategory(category: String) void
+        +getPrice() double
+        +setPrice(price: double) void
+        +getQuantity() int
+        +setQuantity(quantity: int) void
+    }
+    Main --> ShoppingCart : uses
+    ShoppingCart "1" --> "*" Product : contains
