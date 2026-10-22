@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         Product phone = new Product("iphone", "electronics", 50000.0, 1);
         Product headphones = new Product("headphones", "electronics", 299.9, 3);
 
